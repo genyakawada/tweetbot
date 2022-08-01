@@ -1,0 +1,38 @@
+
+https://prog-8.com/docs/git-env
+
+■フォルダをGitで管理できるように、以下のコマンドを実行します。
+git init
+
+■現在のブランチ名をmainに変更します。 以下のコマンドを実行すると、ブランチ名を変更することができます。
+git branch -M main
+
+■プッシュ先のリモートリポジトリを指定することができます。
+git remote add origin <URL>
+git remote add origin https://github.com/genyakawada/LearningPrivate.git
+
+
+■リモートリポジトリが登録できたか確認
+git remote -v
+
+kawadagenya-no-MacBook-Pro:gitdir_private kawadagenya$ git remote -v
+origin	https://github.com/genyakawada/LearningPrivate.git (fetch)
+origin	https://github.com/genyakawada/LearningPrivate.git (push)
+
+■git clone
+git clone https://github.com/[ユーザー名]/[リポジトリ名].git
+
+git clone https://github.com/genyakawada/LearningPrivate.git
+
+
+■リモートリポジトリ新規作成時のThere isn't anything to compare.の解決方法
+https://qiita.com/axs-dev/items/93983ad1b91de34a8c6d
+
+リモートリポジトリに既に自動生成したファイルが存在している場合
+リモートリポジトリをクローンしてからファイルを追加管理していく
+
+1. git init
+2. git clone
+3. git add
+4. git commit
+5. git push
